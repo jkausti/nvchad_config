@@ -1,16 +1,16 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local null_ls = require("null-ls")
+local none_ls = require("none_ls")
 
 local opts = {
   sources = {
-    null_ls.builtins.diagnostics.mypy.with({
+    none_ls.builtins.diagnostics.mypy.with({
       extra_args = function()
       local virtual = os.getenv("VIRTUAL_ENV") or "/usr"
       return { "--python-executable", virtual .. "/bin/python3"}
       end,
     }),
-    null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.formatting.black,
+    none_ls.builtins.diagnostics.ruff,
+    none_ls.builtins.formatting.black,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

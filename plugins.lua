@@ -1,9 +1,9 @@
 local plugins = {
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     ft = {"python"},
     opts = function ()
-      return require "custom.configs.null-ls"
+      return require "custom.configs.none-ls"
     end,
   },
   {
@@ -32,6 +32,10 @@ local plugins = {
         "toml"
       }
     }
+  },
+  "kdheepak/lazygit.nvim",
+  dependencies = {
+    "nvim-lua/plenary.vim"
   }
 }
 return plugins
