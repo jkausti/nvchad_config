@@ -12,7 +12,6 @@ local plugins = {
       ensure_installed = {
         "pyright",
         "ruff",
-        "mypy",
         "black",
       }
     }
@@ -33,9 +32,11 @@ local plugins = {
       }
     }
   },
-  "kdheepak/lazygit.nvim",
-  dependencies = {
-    "nvim-lua/plenary.vim"
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.vim"
+    }
   }
 }
 return plugins

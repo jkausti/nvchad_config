@@ -3,12 +3,12 @@ local none_ls = require("none_ls")
 
 local opts = {
   sources = {
-    none_ls.builtins.diagnostics.mypy.with({
-      extra_args = function()
-      local virtual = os.getenv("VIRTUAL_ENV") or "/usr"
-      return { "--python-executable", virtual .. "/bin/python3"}
-      end,
-    }),
+    -- none_ls.builtins.diagnostics.mypy.with({
+      -- extra_args = function()
+      -- local virtual = os.getenv("VIRTUAL_ENV") or "/usr"
+      -- return { "--python-executable", virtual .. "/bin/python3"}
+      -- end,
+    -- }),
     none_ls.builtins.diagnostics.ruff,
     none_ls.builtins.formatting.black,
   },

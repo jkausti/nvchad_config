@@ -7,7 +7,7 @@ M.abc = {
   },
   t = {
     ["<C-space>"] = {"<C-\\><C-n><C-w>h", "Escape terminal mode", opts = { silent=true }}
-  }
+  },
 }
 
 return M
